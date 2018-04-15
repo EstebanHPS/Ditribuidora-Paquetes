@@ -27,8 +27,6 @@ std::list<std::string> UIlist(std::string linea)
 }
 
 ///FUNCIONES DE LOS TADS
-Persona:: Persona()
-{}
 
 int OficinaGeneral::agregarPaquete(Paquete PaqueteA)
 {
@@ -57,17 +55,6 @@ Persona* OficinaGeneral::buscarPersona(string cc)
         }
     }
     return NULL;
-}
-
-
-Persona::Persona(string Nombre, string NumeroDeIdentificiacion,string Direccion,string Ciudad, string Telefono)
-{
-    this->nombre=Nombre;
-    this->numeroDeIdentificiacion=NumeroDeIdentificiacion;
-    this->direccion=Direccion;
-    this->ciudad=Ciudad;
-    this->telefono=Telefono;
-
 }
 
 ///IMPLEMENTACION DE LAS FUNCIONES DEL MENÚ DEL SISTEMA

@@ -35,6 +35,21 @@ private:
     string ciudad;
     string telefono;
 public:
+
+    Persona()
+    {
+
+    }
+
+    Persona(string Nombre, string NumeroDeIdentificiacion,string Direccion,string Ciudad, string Telefono)
+    {
+        this->nombre=Nombre;
+        this->numeroDeIdentificiacion=NumeroDeIdentificiacion;
+        this->direccion=Direccion;
+        this->ciudad=Ciudad;
+        this->telefono=Telefono;
+    }
+
     string getNombre()
     {
         return nombre;
@@ -55,9 +70,6 @@ public:
     {
         return telefono;
     }
-
-    Persona(string Nombre, string NumeroDeIdentificiacion,string Direccion,string Ciudad, string Telefono);
-    Persona();
 };
 
 class Paquete
@@ -69,22 +81,12 @@ private:
     string tipoDeContenido;
     string numeroDeGuia;
 public:
-    string getNumeroDeGuia()
+
+    Paquete()
     {
-        return numeroDeGuia;
+
     }
-    double setPeso()
-    {
-        return peso;
-    }
-    string setTipoDeContenido()
-    {
-        return tipoDeContenido;
-    }
-    string setNumeroDeGuia()
-    {
-        return numeroDeGuia;
-    }
+
     Paquete(string NumeroDeGuia, string TipoDeContenido, double Peso, Persona* rem, Persona* des)
     {
         this->numeroDeGuia=NumeroDeGuia;
@@ -102,6 +104,23 @@ public:
         this->tipoDeContenido=TipoDeContenido;
         this->peso=Peso;
     }
+
+    string getNumeroDeGuia()
+    {
+        return numeroDeGuia;
+    }
+    double setPeso()
+    {
+        return peso;
+    }
+    string setTipoDeContenido()
+    {
+        return tipoDeContenido;
+    }
+    string setNumeroDeGuia()
+    {
+        return numeroDeGuia;
+    }
 };
 
 class RegionDeReparto
@@ -111,11 +130,22 @@ private:
     string Codigo;
     list<Paquete> paquetes;
 public:
+
+    RegionDeReparto()
+    {
+
+    }
+
+    RegionDeReparto(string Nombre, string codigo)
+    {
+        this->nombre=Nombre;
+        this->Codigo=codigo;
+    }
+
     string getCodigo()
     {
         return Codigo;
     }
-    //Paquete buscarPaquete(string numeroGuia);
 
     list<Paquete> getPaquetes()
     {
@@ -131,12 +161,6 @@ public:
     {
         paquetes.push_back(paquete);
     }
-
-    RegionDeReparto(string Nombre, string codigo)
-    {
-        this->nombre=Nombre;
-        this->Codigo=codigo;
-    }
 };
 
 class OficinaDeReparto
@@ -149,6 +173,20 @@ private:
     list<RegionDeReparto> ConjuntoDeRegiones;
 
 public:
+
+    OficinaDeReparto()
+    {
+
+    }
+
+    OficinaDeReparto( string CodigoDeIdentificacionIndividual, string nombre, string direccion, string ciudad)
+    {
+        this->codigoDeIdentificacionIndividual=CodigoDeIdentificacionIndividual;
+        this->Nombre=nombre;
+        this->Direccion=direccion;
+        this->Ciudad=ciudad;
+    }
+
     string getCodigoDeIdentificacionIndividual()
     {
         return codigoDeIdentificacionIndividual;
@@ -166,20 +204,8 @@ public:
         ConjuntoDeRegiones.push_back(regionDeReparto);
     }
 
-    OficinaDeReparto( string CodigoDeIdentificacionIndividual, string nombre, string direccion, string ciudad)
-    {
-        this->codigoDeIdentificacionIndividual=CodigoDeIdentificacionIndividual;
-        this->Nombre=nombre;
-        this->Direccion=direccion;
-        this->Ciudad=ciudad;
-    }
     bool estaRegion(string codRegion);
     void insertarPaquete(string codRegion, Paquete paq);
-
-    OficinaDeReparto()
-    {
-
-    }
 };
 
 class OficinaGeneral
@@ -191,6 +217,12 @@ private:
     list<Paquete> Paquetes;
 
 public:
+
+    OficinaGeneral()
+    {
+
+    }
+
     void setlistaDeOficionasDeReparto(OficinaDeReparto OficinaDeReparto)
     {
         listaDeOficionasDeReparto.push_back(OficinaDeReparto);

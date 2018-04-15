@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1523794879 source:c:\users\esteban\desktop\semestre v\estructuras de datos\proyecto\entrega1\distribuidora paquetes\main.cpp
+	"cabecera.h"
+
+1523795084 c:\users\esteban\desktop\semestre v\estructuras de datos\proyecto\entrega1\distribuidora paquetes\cabecera.h
+	<iostream>
+	<string>
+	<fstream>
+	<sstream>
+	<list>
+	<string.h>
+	<stdlib.h>
+	"cabecera.hxx"
+
+1523794817 c:\users\esteban\desktop\semestre v\estructuras de datos\proyecto\entrega1\distribuidora paquetes\cabecera.hxx
+	<iostream>
+	<string>
+	<fstream>
+	<sstream>
+	<list>
+	<stdlib.h>
+	<sstream>
+
